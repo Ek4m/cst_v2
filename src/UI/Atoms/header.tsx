@@ -2,7 +2,6 @@
 
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
-import { ThemeToggle } from "@/components/ThemeToggle";
 
 import React, { useState } from "react";
 
@@ -21,7 +20,6 @@ export const MainHeader = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-4">
-            <ThemeToggle />
             <div className="ml-10 flex items-baseline space-x-8">
               <Link
                 href="/"
@@ -116,9 +114,6 @@ export const MainHeader = () => {
                 Get Started
               </button>
             </Link>
-            <div className="mt-4 flex justify-center">
-              <ThemeToggle />
-            </div>
           </div>
         </div>
       )}

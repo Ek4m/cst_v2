@@ -3,7 +3,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { MainHeader } from "@/UI/Atoms/header";
 import { MainFooter } from "@/UI/Atoms/footer";
-import { ThemeProvider } from "@/components/ThemeProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,13 +27,11 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <ThemeProvider attribute="data-theme" defaultTheme="light" enableSystem>
           <div className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
             <MainHeader />
             {children}
             <MainFooter />
           </div>
-        </ThemeProvider>
       </body>
     </html>
   );
